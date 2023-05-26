@@ -47,6 +47,7 @@ extern "C" {
 /* Exported macro ------------------------------------------------------------*/
 /* USER CODE BEGIN EM */
 
+
 /* USER CODE END EM */
 
 /* Exported functions prototypes ---------------------------------------------*/
@@ -73,8 +74,6 @@ void Error_Handler(void);
 #define LED_D6_GPIO_Port GPIOA
 #define LED_D7_Pin GPIO_PIN_7
 #define LED_D7_GPIO_Port GPIOA
-#define LED_BACKLIGHT_BRIGHTNESS_Pin GPIO_PIN_1
-#define LED_BACKLIGHT_BRIGHTNESS_GPIO_Port GPIOB
 #define LED_ENABLE_Pin GPIO_PIN_12
 #define LED_ENABLE_GPIO_Port GPIOA
 #define LED_RS_Pin GPIO_PIN_15
