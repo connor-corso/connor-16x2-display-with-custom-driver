@@ -4,6 +4,7 @@
   * @file           : 16x2.h
   * @brief          : Header for 16x2.h file.
   *                   This file contains the common defines of the application.
+  *                 The datasheet for the chip that I have is found here https://pdf1.alldatasheet.com/datasheet-pdf/view/37317/SAMSUNG/KS0066U.html
   ******************************************************************************
 
   ******************************************************************************
@@ -45,6 +46,42 @@ void lcd_send_command(int rs, int rw, int data);
 
 #define LCD_SEGMENT_WIDTH 5
 #define LCD_SEGMENT_HEIGHT 8
+
+
+// RS and RW operations
+// Bits in order RS then RW
+#define SET_INSTRUCTION_WRITE 0x0
+#define SET_BUSY_ADDR_READ    0x1
+#define SET_DATA_WRITE        0x2
+#define SET_READ_DATA         0x3
+
+
+// common lcd commands
+#define CLRSCR  0x01
+#define HOME    0x02
+
+#define DEC_CUR 0x04
+#define INC_CUR 0x06
+
+#define DEC_DISPLAY 0x05
+#define INC_DISPLAY 0x07
+
+#define DISPLAY_CURSOR_DISABLE  0x08
+#define CURSOR_BLINK_ENABLE     0x09
+#define CURSOR_ENABLE           0x0A
+#define DISPLAY_ENABLE          0x0C
+
+#define SHIFT_UP_CUR        0x10
+#define SHIFT_DOWN_CUR      0x14
+#define SHIFT_UP_DISPLAY    0x18
+#define SHIFT_DOWN_DISPLAY  0x1C
+
+
+#define SET_8BIT_2LINE_5x8 0x38
+#define SET_4BIT_2LINE_5x8 0x28
+
+
+
 
 
 
